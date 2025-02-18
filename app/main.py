@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 import torch
 
+from fen_processor import fen_to_tensor
+
 app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
