@@ -32,7 +32,7 @@ def predict_move():
     
     return jsonify({"next_move": predicted_move})
 
-
+# Testing endpoint
 @app.route("/fen", methods=["POST"])
 def process_fen():
     data = request.get_json() 
