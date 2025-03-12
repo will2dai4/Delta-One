@@ -11,7 +11,7 @@ NUM_EPOCHS = 10
 
 # Device Configuration
 # Change "cpu" to "cuda" if available
-device = torch.devive("cpu")
+device = torch.device("cpu")
 
 # Loading the dataset
 dataset = ChessDataset("data/chess_data.csv")
@@ -48,5 +48,5 @@ for epoch in range(NUM_EPOCHS):
 
     print(f"Epoch [{epoch+1}/{NUM_EPOCHS}], Loss: {total_loss:.4f}")
 
-torch.save(model.state_dict(), "chess_model.pth")
+torch.save(model.state_dict(), "chess_model_cnn.pth")
 print("Training complete. Model saved.")
